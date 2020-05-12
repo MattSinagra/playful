@@ -1,0 +1,28 @@
+{% if item.banner_image|length > 0 %}
+    {% if item.banner_width == 'full-width' %}
+        <div class="page-builder page-builder-banner--block full-width block">
+            <div class="pb--banner background-image" style="background-image: url({{ TimberImage(item.banner_image).src }});"></div>
+        </div>
+    {% elseif item.banner_width == 'standard' %}
+        <div class="block page-builder page-builder-banner--block standard">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-12">
+                        <div class="pb--banner background-image" style="background-image: url({{ TimberImage(item.banner_image).src }});"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <div class="block page-builder page-builder-banner--block standard">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-12">
+                        <div class="pb--banner background-image" style="background-image: url({{ TimberImage(item.banner_image).src }});"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+{% endif %}

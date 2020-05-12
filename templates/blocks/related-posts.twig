@@ -1,0 +1,28 @@
+{% if related_posts|length > 0 %}
+<div class="related-posts--wrapper">
+    <div class="container">
+        <div class="row">
+            {% for post in related_posts %}
+                <div class="col col-12 col-md-6">
+                    <div class="related-post--wrapper">
+                        <article class="related-post--article related-post-type--{{ post.post_type }}" id="related-post--{{ post.ID }}">
+                            <header>
+                                <img src="{{ post.thumbnail.src|resize(1200, 300) }}" class="img-fluid">
+                                <h2 class="entry-title"><a href="{{ post.link }}">{{ post.title }}</a></h2>
+                                {% include "blocks/entry-meta.twig" %}
+                            </header>
+                            <div class="entry-summary">
+                                {% if post.post_excerpt|length > 0 %}
+                                    {{ post.post_excerpt }}
+                                {% else %}
+                                    {{post.preview.length(25)}}
+                                {% endif %}
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}

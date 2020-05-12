@@ -1,0 +1,14 @@
+<article{{ function('post_class') }}>
+    <header>
+        <img src="{{ post.thumbnail.src|resize(1200, 300) }}" class="img-fluid">
+        <h2 class="entry-title"><a href="{{ post.link }}">{{ post.title }}</a></h2>
+        {% include "blocks/entry-meta.twig" %}
+    </header>
+    <div class="entry-summary">
+        {% if post.post_excerpt|length > 0 %}
+            {{ post.post_excerpt }}
+        {% else %}
+            {{post.preview.length(100)}}
+        {% endif %}
+    </div>
+</article>

@@ -1,0 +1,37 @@
+{% if menu %}
+    <nav class="mobile-nav-primary py-3">
+        <div class="nav-mobile-primary-close--wrapper pl-3 mb-3">
+            <i class="fa fa-arrow-left pr-3"></i><span class="text-uppercase">Close Menu</span>
+        </div>
+        <div class="mobile-nav-logo--wrapper mw-100 my-5 px-4">
+            <a class="brand" href="{{ site.url }}">
+                {% if options.site_mobile_logo|length > 0 %}
+                    <img class="brand--logo image-square img-fluid" src="{{ TimberImage(options.site_mobile_logo).src }}" />
+                {% elseif options.site_logo|length > 0 %}
+                    <img class="brand--logo image-square img-fluid" src="{{ TimberImage(options.site_logo).src }}" />
+                {% else %}
+                    {{ site.name }}
+                {% endif %}
+            </a>
+        </div>
+        <ul id="menu-mobile-menu" class="pl-0">
+            {% for item in menu %}
+                <li class="nav-main-item {{ item.classes | join(' ') }}">
+                    <a class="nav-main-link" href="{{ item.link }}">{{ item.title }}</a>
+                    {% if item.get_children %}
+                        <ul class="nav-drop">
+                            {% for item in item.get_children %}
+                                <li class="nav-drop-item {{ item.classes | join(' ') }}">
+                                    <a class="nav-drop-link" href="{{ item.link }}">{{ item.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="mobile-nav-social--wrapper">
+            {% include 'blocks/social-media.twig' %}
+        </div>
+    </nav>
+{% endif %}

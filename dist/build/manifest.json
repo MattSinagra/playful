@@ -1,0 +1,31 @@
+{
+  "main.css": "build/main.css",
+  "main.css.map": "build/main.css.map",
+  "main.js": "build/main.js",
+  "main.js.map": "main.5603ebab34623bb6710c.hot-update.js.map",
+  "runtime.js": "build/runtime.js",
+  "runtime.js.map": "build/runtime.js.map",
+  "vendors~main.js": "build/vendors~main.js",
+  "vendors~main.js.map": "build/vendors~main.js.map",
+  "wpackioEp": {
+    "main": {
+      "js": [
+        "build/runtime.js",
+        "build/vendors~main.js",
+        "build/main.js"
+      ],
+      "js.map": [
+        "build/runtime.js.map",
+        "build/vendors~main.js.map",
+        "build/main.js.map",
+        "main.5603ebab34623bb6710c.hot-update.js.map"
+      ],
+      "css": [
+        "build/main.css"
+      ],
+      "css.map": [
+        "build/main.css.map"
+      ]
+    }
+  }
+}

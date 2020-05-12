@@ -1,0 +1,37 @@
+<header class="site-header">
+    <div class="container">
+        {% block header %}
+            <div class="row">
+                <div class="col col-12">
+                    <div class="header-social--wrapper text-right">
+                        {% include 'blocks/social-media.twig' %}
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col col-12 col-sm-3">
+                    {# <a class="brand" href="{{ site.url }}">
+                        {% if options.site_logo|length > 0 %}
+                            <div class="brand--logo background-image size-contain" style="background-image: url({{ TimberImage(options.site_logo).src }});"></div>
+                        {% else %}
+                            {{ site.name }}
+                        {% endif %}
+                    </a> #}
+                </div>
+                <div class="col col-12 col-sm-9">
+                    <div class="clearfix">
+                        <div class="d-none d-lg-block">
+                            {% include 'navigation_layouts/nav-primary.twig' with { menu: menus.primary_menu.get_items } %}
+                        </div>
+                        <div class="d-inline-block d-lg-none header--menu pull-right">
+                            <p class="m-0">
+                                MENU
+                                <i class="fa fa-bars mobile-icon"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endblock %}
+    </div>
+</header>

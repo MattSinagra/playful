@@ -1,0 +1,287 @@
+/////////////////////////////////////////////
+//** Variables **//
+//** This is the file for basic overrides of bootstraps variables. **//
+//** You can accomplish a lot of the site setup here. If you need access to more, checkout bootstrap_components/bootstrap/ and find the variables file. **//
+/////////////////////////////////////////////
+
+// Border Radius Settings
+//
+// This defines the border radius globally across elements including buttons.
+$border-radius:          .25rem !default;
+$border-radius-lg:       .3rem !default;
+$border-radius-sm:       .2rem !default;
+
+/*
+ * Color System
+ */
+$white:    #fff;
+$gray:     #636466;
+$gray-alt: #F3F3F3;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #868e96;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+$grays: (
+        100: $gray-100,
+        200: $gray-200,
+        300: $gray-300,
+        400: $gray-400,
+        500: $gray-500,
+        600: $gray-600,
+        700: $gray-700,
+        800: $gray-800,
+        900: $gray-900
+) !default;
+
+// Colors
+//
+// Regular Colors
+
+$blue:    #007bff;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #e83e8c;
+$red:     #dc3545;
+$orange:  #F26522;
+$yellow:  #ffc107;
+$green:   #8dc63f;
+$teal:    #20c997;
+$cyan:    #17a2b8;
+
+$colors: (
+        blue:      $blue,
+        indigo:    $indigo,
+        purple:    $purple,
+        pink:      $pink,
+        red:       $red,
+        orange:    $orange,
+        yellow:    $yellow,
+        green:     $green,
+        teal:      $teal,
+        cyan:      $cyan,
+        white:     $white,
+        gray:      $gray,
+        gray-dark: $gray-800,
+
+) !default;
+
+// Colors
+//
+// Theme Colors
+
+$theme-colors: (
+        primary: $green,
+        secondary: $gray,
+        tertiary: $gray-alt,
+        success: $orange,
+        info: $gray,
+        warning: $yellow,
+        danger: $red,
+        light: $gray-100,
+        dark: $gray-800,
+        in-stock: $green,
+        out-of-stock: $red,
+        body: #1a1a1d,
+        theme-gray:#4E4E50,
+        theme-red: #6F2232,
+        theme-pink: #950740,
+        theme-brightred: #c3073f
+) !default;
+
+// Colors
+//
+// Button Colors
+// 
+// @see _buttons.scss
+$button-colors: (
+        // Standard (.btn)
+        standard: (
+                base-background: map-get($theme-colors, theme-gray),
+                base-color: $white,
+                hover-background: darken(map-get($theme-colors, primary), 15%),
+                hover-color: $white,
+        ),
+        // Primary Button (.btn .btn-primary)
+        primary: (
+                base-background: map-get($theme-colors, theme-brightred),
+                base-color: $white,
+                hover-background: darken(map-get($theme-colors, primary), 15%),
+                hover-color: $white
+        ),
+        // Secondary Buttons (.btn .btn-secondary)
+        secondary: (
+                base-background: map-get($theme-colors, secondary),
+                base-color: $white,
+                hover-background: darken(map-get($theme-colors, secondary), 15%),
+                hover-color: $white
+        )
+);
+
+// Button Settings
+//
+// Padding
+// 
+// For each of Bootstrap's buttons, define text, background and border color.
+$input-btn-padding-y:       .5rem;
+$input-btn-padding-x:       .75rem;
+$input-btn-line-height:     1.25;
+
+$input-btn-padding-y-sm:    .25rem;
+$input-btn-padding-x-sm:    .5rem;
+$input-btn-line-height-sm:  1.5;
+
+$input-btn-padding-y-lg:    .5rem;
+$input-btn-padding-x-lg:    1rem;
+$input-btn-line-height-lg:  1.5;
+
+$btn-block-spacing-y:            .5rem !default;
+// $btn-font-weight:                $font-weight-normal;
+
+// Button Settings
+//
+// Border Radius
+// 
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius:              $border-radius;
+$btn-border-radius-lg:           $border-radius-lg;
+$btn-border-radius-sm:           $border-radius-sm;
+
+$btn-transition:                 all .15s ease-in-out;
+
+
+// Grid containers
+//
+// Container max widths
+
+//$container-max-widths: (
+//        sm: 540px,
+//        md: 720px,
+//        lg: 960px,
+//        xl: 1140px
+//) !default;
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+$main-sm-columns: 12;
+$sidebar-sm-columns: 4;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+// $body-bg:   map-get($theme-colors, body);
+$body-color: $gray;
+        
+// Links
+//
+// Style anchor elements.
+$link-color: map-get($theme-colors, theme-pink);
+$navigation-link-color: map-get($theme-colors, theme-pink);
+/*
+ * $link-decoration:       none !default;
+ * $link-hover-color:      darken($link-color, 15%) !default;
+ * $link-hover-decoration: underline !default;
+ */
+
+/*
+ * Fonts
+ *
+ * Font, line-height, and color for body text, headings, and more.
+ */
+
+// Font Families
+
+$font-family-serif: 'Merriweather', serif;
+$font-family-sans-serif: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-base:       $font-family-serif;
+
+// Font Sizes
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+// $font-size-lg:   1.25rem;
+// $font-size-sm:   .875rem;
+// $h1-large:       4rem;
+
+// Headings
+$headings-font-family:   $font-family-serif;
+$headings-font-weight:   600;
+$headings-color:         map-get($theme-colors, theme-red);
+$headings-margin-bottom: 15px;
+
+// Font Weights
+$font-weight-normal: normal;
+$font-weight-bold:   bold;
+$font-weight-base:   $font-weight-normal;
+$line-height-base:   1.875;
+$headings-line-height:   1.1 !default;
+
+/** 
+ * Font Sizes - Mobile
+ */
+$h1-font-size:   3rem;
+$h2-font-size:   2.25rem;
+$h3-font-size:   1.75rem;
+$h4-font-size:   1.5rem;
+$h5-font-size:   1.25rem;
+$h6-font-size:   1rem;
+
+/**
+ * Font Sizes - Else
+ */
+$header-styles: (
+  'small': (
+    'h1': ('font-size': 24, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom),
+    'h2': ('font-size': 20, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom),
+    'h3': ('font-size': 19, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom),
+    'h4': ('font-size': 18, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom),
+    'h5': ('font-size': 17, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom),
+    'h6': ('font-size': 16, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom)
+  ),
+  'medium': (
+    'h1': ('font-size': 48, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom),
+    'h2': ('font-size': 40, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom),
+    'h3': ('font-size': 31, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom),
+    'h4': ('font-size': 25, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom),
+    'h5': ('font-size': 20, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom),
+    'h6': ('font-size': 16, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom)
+  ),
+  'large': (
+    'h1': ('font-size': 48, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom),
+    'h2': ('font-size': 40, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom),        
+	'h3': ('font-size': 31, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom),
+	'h4': ('font-size': 25, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom),
+	'h5': ('font-size': 20, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom),
+	'h6': ('font-size': 16, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom)
+  ),
+  'extra-large': (
+	'h1': ('font-size': 48, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom),
+    'h2': ('font-size': 40, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom),        
+	'h3': ('font-size': 31, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom),
+	'h4': ('font-size': 25, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom),
+	'h5': ('font-size': 20, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom),
+	'h6': ('font-size': 16, 'line-height': $headings-line-height, 'margin-top': 0, 'margin-bottom': $headings-margin-bottom)
+  )
+);
+
+// Paragraphs and Spans
+
+$paragraphs-margin-top:    0;
+$paragraphs-margin-bottom: 1rem;
+$paragraphs-font-family:   inherit;
+$paragraphs-font-weight:   normal;
+$paragraphs-line-height:   $line-height-base;
+$paragraphs-color:         #fff;
+
+/**
+ * Page Builder Settings
+ */
+$page-builder-block-spacing: 60px;
+

@@ -1,0 +1,27 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+    {% include 'blocks/page-header.twig' %}
+
+    <div class="blog--wrapper">
+        <div class="container">
+            <div class="row">
+                {% for post in posts %}
+                <div class="col col-12 col-sm-6 col-md-4">
+                        {% include "blocks/content.twig" with {post: post}  %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {% include 'blocks/pagination.twig' %}
+
+{% endblock %}
+
+{#{% block sidebar %}#}
+
+    {#{% include "blocks/sidebar.twig" %}#}
+
+{#{% endblock %}#}

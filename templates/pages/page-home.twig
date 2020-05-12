@@ -1,0 +1,12 @@
+{% extends "templates/base.twig" %}
+
+{% block content %}
+
+        {% for post in posts %}
+            {% include 'blocks/page-header.twig' %}
+            {% include 'templates/page-introduction.twig' %}
+        {% endfor %}
+
+    {% include 'blocks/pagination.twig' %}
+
+{% endblock %}

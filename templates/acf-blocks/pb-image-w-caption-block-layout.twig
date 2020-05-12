@@ -1,0 +1,22 @@
+{# {% if fields and fields.left_col_classes and field.right_col_classes %} #}
+    <div class="block page-builder page-builder--image-w-caption-layout {{ block.className }}">
+        <div class="container">
+            <div class="row">
+                <div class="{{ fields.left_col_classes | join(' ') }}">
+                    {% if fields.image|length > 0 %}
+                        <div class="page-builder--image-w-caption_image--wrapper">
+                            <div class="background-image {% if is_preview %}is-preview-background-image-padding-50 {% endif %} {{ fields.image_classes | join(' ') }}" style="background-image: url({{ fields.image }});"></div>
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="{{ fields.right_col_classes | join(' ') }}">
+                    {% if fields.caption|length > 0 %}
+                        <div class="{{ fields.caption_wrapper_classes | join(' ') }}">
+                            {{ fields.caption }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{# {% endif %} #}

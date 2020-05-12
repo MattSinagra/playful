@@ -1,0 +1,14 @@
+{
+    "name": "snags/playful",
+    "authors": [
+        {
+            "name": "MattSinagra",
+            "email": "matthew.sinagra@gmail.com"
+        }
+    ],
+    "require": {
+        "wpackio/enqueue": "^2.1",
+        "timber/timber": "^1.15",
+        "squizlabs/php_codesniffer": "*"
+    }
+}

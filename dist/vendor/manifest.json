@@ -1,0 +1,22 @@
+{
+  "runtime.js": "vendor/runtime.js",
+  "runtime.js.map": "vendor/runtime.js.map",
+  "vendor.js": "vendor/vendor.js",
+  "vendor.js.map": "vendor/vendor.js.map",
+  "vendors~vendor.js": "vendor/vendors~vendor.js",
+  "vendors~vendor.js.map": "vendor/vendors~vendor.js.map",
+  "wpackioEp": {
+    "vendor": {
+      "js": [
+        "vendor/runtime.js",
+        "vendor/vendors~vendor.js",
+        "vendor/vendor.js"
+      ],
+      "js.map": [
+        "vendor/runtime.js.map",
+        "vendor/vendors~vendor.js.map",
+        "vendor/vendor.js.map"
+      ]
+    }
+  }
+}
