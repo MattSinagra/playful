@@ -1,0 +1,13 @@
+# a gitignore of some type
+
+node_modules/
+dist/
+vendor/
+templates/
+
+*.lock
+*.jpg
+*.png
+*.bmp
+
+
