@@ -7,7 +7,7 @@
     "dart-sass": "^1.25.0",
     "fibers": "^5.0.0",
     "less-loader": "^6.1.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "webpack": "^4.43.0"
